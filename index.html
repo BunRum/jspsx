@@ -1,14 +1,15 @@
 <html>
     <body>
-        <wasmpsx-player></wasmpsx-player>
-        <script src="https://bunrum.github.io/jspsx/wasmpsx.min.js"></script>
+        <wasmpsx-player id="my-wasmpsx-element"></wasmpsx-player>
+        <script src="https://bunrum.github.io/jspsx/wasmpsx.min.js" crossorigin="anonymous"></script>
+        <script src="test.js"></script>
         <script>
               setTimeout(function(){
                 document.querySelector('wasmpsx-player').shadowRoot.querySelector('canvas').style="border: 0px none; background-color: black; top: 0px; top: 0; position: relative; display: block; margin: auto;";
               }, 100);
-        </script>
-        <input id="inputurl"></input>
-        <button id="sub" onclick="document.querySelector('wasmpsx-player').loadUrl(document.getElementById('inputurl').value);">submit</button>
+              console.log(games[location.hash.substr(1)]);
+              var game = "https://bunrum.github.io/jspsx/" + games[location.hash.substr(1)]
+              document.getElementById('my-wasmpsx-element').readFile(games[location.hash.substr(1)]);
         </script>
     </body>
 </html>
