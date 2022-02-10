@@ -8,17 +8,7 @@
               }, 100);
         </script>
         <input id="inputurl"></input>
-        <button id="sub">submit</button>
-        <script>
-            var btn = document.getElementById("sub");
-            var url = document.getElementById("inputurl");
-            btn.addEventListener("click", alertMe);
-            
-            function alertMe(){
-                
-                document.querySelector('wasmpsx-player').loadUrl(url.value);
-                console.log(url.value);
-            }
+        <button id="sub" onclick="document.querySelector('wasmpsx-player').loadUrl(document.getElementById('inputurl').value);">submit</button>
         </script>
     </body>
 </html>
