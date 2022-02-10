@@ -3,15 +3,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <body>
-        <wasmpsx-player id="my-wasmpsx-element"></wasmpsx-player>
-        <script src="https://bunrum.github.io/jspsx/wasmpsx.min.js" crossorigin="anonymous"></script>
+        <wasmpsx-player></wasmpsx-player>
+        <button onclick="document.querySelector('wasmpsx-player').loadUrl(games[location.hash.substr(1)])"></button>
+        <script src="wasmpsx.min.js"></script>
         <script src="test.js"></script>
         <script>
               setTimeout(function(){
                 document.querySelector('wasmpsx-player').shadowRoot.querySelector('canvas').style="border: 0px none; background-color: black; top: 0px; top: 0; position: relative; display: block; margin: auto;";
               }, 100);
-              console.log(games[location.hash.substr(1)]);
-              document.querySelector('wasmpsx-player').loadUrl(games[location.hash.substr(1)]);
         </script>
     </body>
 </html>
