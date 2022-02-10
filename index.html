@@ -1,9 +1,9 @@
 <body>
     <script src="test.js"></script>
     <wasmpsx-player></wasmpsx-player>
-    <button onclick="document.querySelector('wasmpsx-player').loadUrl(games[location.hash.substr(1)])">BUTTON</button>
     <script src="wasmpsx.min.js"></script>
     <script>
+        document.querySelector('wasmpsx-player').loadUrl(games[location.hash.substr(1)])
         setTimeout(function () {
             document.querySelector('wasmpsx-player').shadowRoot.querySelector('canvas').style = "border: 0px none; background-color: black; top: 0px; top: 0; position: relative; display: block; margin: auto;";
         }, 100);
