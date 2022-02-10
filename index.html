@@ -1,16 +1,11 @@
-<html lang="en">
-    <title>hi</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <body>
-        <wasmpsx-player></wasmpsx-player>
-        <button onclick="document.querySelector('wasmpsx-player').loadUrl(games[location.hash.substr(1)])">BUTTON</button>
-        <script src="wasmpsx.min.js"></script>
-        <script src="test.js"></script>
-        <script>
-              setTimeout(function(){
-                document.querySelector('wasmpsx-player').shadowRoot.querySelector('canvas').style="border: 0px none; background-color: black; top: 0px; top: 0; position: relative; display: block; margin: auto;";
-              }, 100);
-        </script>
-    </body>
-</html>
+<body>
+    <script src="test.js"></script>
+    <wasmpsx-player></wasmpsx-player>
+    <button onclick="document.querySelector('wasmpsx-player').loadUrl(games[location.hash.substr(1)])">BUTTON</button>
+    <script src="wasmpsx.min.js"></script>
+    <script>
+        setTimeout(function () {
+            document.querySelector('wasmpsx-player').shadowRoot.querySelector('canvas').style = "border: 0px none; background-color: black; top: 0px; top: 0; position: relative; display: block; margin: auto;";
+        }, 100);
+    </script>
+</body>    
