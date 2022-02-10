@@ -11,7 +11,7 @@
                 document.querySelector('wasmpsx-player').shadowRoot.querySelector('canvas').style="border: 0px none; background-color: black; top: 0px; top: 0; position: relative; display: block; margin: auto;";
               }, 100);
               console.log(games[location.hash.substr(1)]);
-              document.querySelector('wasmpsx-player').readFile(games[location.hash.substr(1)]);
+              document.querySelector('wasmpsx-player').loadUrl(games[location.hash.substr(1)]);
         </script>
     </body>
 </html>
